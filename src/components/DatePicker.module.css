@@ -1,0 +1,72 @@
+.wrapper {
+  width: 216.61px;
+  display: flex;
+  border: 1px solid #e3e3e3;
+  padding: 0.5rem;
+}
+
+.wrapper.focused {
+  border: 1px solid #1c8d76 !important;
+}
+
+.input {
+  flex: 1;
+
+  outline: none;
+  border: none;
+}
+
+.label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 30px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip svg {
+  font-size: 1.5rem;
+}
+
+.tooltip svg path {
+  color: red;
+}
